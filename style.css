@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+  font-family:Montserrat, "Segoe UI", sans-serif;
+}
+main.content {max-width:900px;margin:auto;}
+nav.links > * {counter-increment:chapter;display:block;}
+nav.links > a::before {content: counter(chapter)". ";}
+nav.links {
+  counter-reset:chapter;
+  float:left;
+  width: 300px;min-height: max-content;
+  border:1px solid black;
+  margin:0.5rem 1rem;
+}
