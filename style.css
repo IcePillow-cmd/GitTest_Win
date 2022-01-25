@@ -1,28 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata');
-
+:root {
+  --duration:0.3s;
+  --color:black;
+  --bg:white;
+  --bs:rgb(36, 36, 36);
+}
+@keyframes focus {
+  0% {
+    transform:scale(1)
+  }50% {transform:scale(1.05)}
+  100%{transform:scale(1)}
+}
+[id] {
+  padding:1rem;
+}
+[id]:target {
+  animation:focus var(--duration) forwards;
+  box-shadow:0 0 5px 0 var(--bs) ;
+}
+body {background:url('static/icons/git.svg') fixed center, url('static/icons/github.svg') fixed center;}
 *:not(code>*) {
   font-family:Montserrat, "Segoe UI", sans-serif;
 }
-main.content {max-width:900px;margin:auto;}
-nav.links > * {counter-increment:chapter;display:block;}
+main.content {max-width:900px;margin:0 auto 3rem;padding:1rem;background-color:var(--bg);box-shadow:0 0 5px 0 var(--bs);}
+main.content > * {background-color: var(--bg);}
+nav.links > * {counter-increment:chapter;display:block;text-decoration: none;color:var(--color);padding:0.5rem;border:1px solid var(--color);}
 nav.links > a::before {content: counter(chapter)". ";}
 nav.links {
   counter-reset:chapter;
-  float:left;
   width: 300px;min-height: max-content;
   border:1px solid black;
   margin:0.5rem 1rem;
+  border:1px solid var(--color);
+  padding:0.5rem;
 }
-div.basic-cmds {
-  margin:1rem 0;
+div[class*=cmds] {
+  margin:0.5rem 0;
   height:max-content;
 }
 code {
   font-family:Inconsolata;
   font-weight:600;
   background:#ddd;
-  padding:5px;
+  padding:2px 5px;
   border-radius:0.3rem;
   box-shadow:1px 2px 0 0 #aaa;
+  margin:0 0.2rem;
 }
