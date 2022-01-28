@@ -2,27 +2,29 @@
     <head>
       <meta charset="UTF-8">
       <link rel="stylesheet" href="style.css">
+      <link rel="shortcut icon" href="static/icons/git.svg" type="icon">
     </head>
     <body>
       <main class="content">
         <h1> Basics of Git and Github Introductory for Beginners </h1>
-        <h3>chapters</h3>
         <nav class="links">
+          <h3>Chapter</h3>
           <a href="#gitwhat">What is Git?</a>
           <a href="#ghwhat">What is Github?</a>
           <a href="#difference">What is the difference?</a>
           <a href="#instructions">How to install git and use github?</a>
           <a href="#basics">Git and Github basics</a>
           <a href="#basic-commands">Git basic commands</a>
+          <a href="#advanced-commands">Git advanced commands</a>
         </nav>
         <div id="gitwhat">
-          <h2> What is Git? </h2>
+          <h2> What is Git? <img src="static/icons/git.svg" alt=""></h2>
           <p> Git is a <u>Version control system</u> or for tracking changes in a file.
           This is usually used for collaboration for its speed and a non linear 
           Workflow.</p>
         </div>
         <div id="ghwhat">
-          <h2> What is Github? </h2>  
+          <h2> What is Github? <img src="static/icons/github.svg" alt=""></h2>  
           <p> Github is an internet hosting site that is used with git. Github provides
             a web <u>GUI</u> (Graphical User Interface) experience for Git and distributing
               source code in public. 
@@ -70,9 +72,11 @@
           <p>Go to Github (Make sure your already signed up) and click the + button in
             the top left corner and click <b>"New Repository"</b>.
           </p>
+          <img src="static/images/create-a-repository.jpg" alt="">
           <p> Then add your desirable Repository name (Advised name: Git_Test), 
-            Make sure it's public and check the "Add a README file". 
+            Make sure it's public and check the "Add a README file". It is also optional to add a .gitignore to ignore files when being pushed upstream in a repository. 
           </p>
+          <img src="static/images/repository-config.jpg" alt="">
           <p> Now you can see a new repository in your screen. <b>Good job!</b>
             You've just created new repository
           </p>
@@ -84,20 +88,31 @@
                 button with the "Code" text in it. 
               Click the SSH category at the upper part and copy the 
               link below</p>
-          <h2>Git Walkthrough (Single File)</h2></li> <!--Git add and commit -->
-          <h2>Git Walkthrough (Multiple Files)</h2>
         </div>
         <div id="basic-commands">
           <h2>Git basic commands</h2>
           <div class="basic-cmds">
             <code>git init</code> - Initializes repository
           </div>
+          <div class="basic-cmds"><code>git branch</code> - shows a list of branch that are included in the local repository</div>
           <div class="basic-cmds">
             <code>git branch <span><</span><i>name</i><span>></span></code> - Creates a new branch
           </div>
           <div class="basic-cmds">
-            <code>git add <span><</span><i>filename</i><span>></span></code> - Adds a 
+            <code>git add <span><</span><i>filename</i><span>></span></code> - Adds a file that will be staged for commit
           </div>
+          <div class="basic-cmds">
+            <code>git commit -m <span><</span><i>message</i><span>></span></code> - commits the file with the <code>-m</code> subcommand to add a message
+          </div>
+          <div class="basic-cmds">
+            <code>git switch <span><</span><i>branchname</i><span>></span></code><code>git checkout <span><</span><i>branchname</i><span>></span></code> - switches to the branch
+          </div>
+          <div class="basic-cmds"><code>git fetch origin</code> - fetches the commits of the branch in a remote repository (example: Github)</div>
+          <div class="basic-cmds"><code>git clone <span><</span><i>githublink</i><span>></span></code> - clones the repository in github</div>
+        </div>
+        <div id="advanced-commands">
+          <div class="advanced-cmds"><code>git merge<span><</span>branchname<span>></span></code> - Merges the current branch with another branch</div>
+          <div class="advanced-cmds"><code>git push --set-upstream <span><</span><i>repo origin</i><span>></span> <span><</span><i>currentbranch</i><span>></span></code> - publishes the a local branch in github</div>
         </div>
       </main>
       
