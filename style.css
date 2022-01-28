@@ -33,9 +33,23 @@ img[src*="repository-config.jpg"] {
   max-width: 100%;
   height:auto;
 } 
-main.content {max-width:900px;margin:0 auto 3rem;padding:1rem;background-color:var(--bg);box-shadow:0 0 5px 0 var(--bs);}
+main.content {
+  max-width:900px;
+  margin:0 auto 3rem;
+  padding:1rem;
+  background-color:var(--bg);
+  box-shadow:0 0 5px 0 var(--bs);
+}
 main.content > * {background-color: var(--bg);}
-nav.links > a {counter-increment:chapter;display:block;text-decoration: none;color:var(--color);padding:0.5rem;position:relative;z-index:2;}
+nav.links > a {
+  counter-increment:chapter;
+  display:block;
+  text-decoration: none;
+  color:var(--color);
+  padding:0.5rem;
+  position:relative;
+  z-index:2;
+}
 nav.links > a::before {content: counter(chapter)". ";}
 nav.links > a::after {
   content:"";
