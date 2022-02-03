@@ -26,9 +26,7 @@ html {scroll-behavior: smooth;}
   box-shadow:0 0 5px 0 var(--bs) ;
 }
 body {background:url('static/icons/git.svg') fixed center, url('static/icons/github.svg') fixed center;}
-*:not(code>*) {
-  font-family:Montserrat, "Segoe UI", sans-serif;
-}
+*:not(code>*) {font-family:Montserrat, "Segoe UI", sans-serif;}
 img[src*="repository-config.jpg"] {
   max-width: 100%;
   height:auto;
@@ -44,14 +42,15 @@ main.content > * {background-color: var(--bg);}
 nav.links > a {
   counter-increment:chapter;
   display:block;
-  text-decoration: none;
   color:var(--color);
   padding:0.5rem;
   position:relative;
   z-index:2;
 }
+a {position:relative;text-decoration: none;z-index:2;color:var(--color);}
+
 nav.links > a::before {content: counter(chapter)". ";}
-nav.links > a::after {
+a::after {
   content:"";
   position:absolute;
   bottom:0;
@@ -63,7 +62,8 @@ nav.links > a::after {
   z-index:-2;
   transition:height calc(var(--duration) - 0.2s) ease;
 }
-nav.links > a:hover::after {
+a:hover {color:var(--bg)!important;}
+nav.links > a:hover::after, a:hover::after {
   height:100%;
   border-top:none;
 }
